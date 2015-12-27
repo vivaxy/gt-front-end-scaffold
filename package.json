@@ -1,0 +1,27 @@
+{
+  "name": "front-end-scaffold",
+  "version": "0.0.0",
+  "description": "front end project scaffold",
+  "main": "none",
+  "scripts": {
+    "test": "node ./test/index.js",
+    "precommit": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivaxy/front-end-scaffold.git"
+  },
+  "keywords": [
+    "scaffold"
+  ],
+  "author": "vivaxy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivaxy/front-end-scaffold/issues"
+  },
+  "homepage": "https://github.com/vivaxy/front-end-scaffold#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "husky": "^0.10.2"
+  }
+}
