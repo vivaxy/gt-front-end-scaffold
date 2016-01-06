@@ -200,5 +200,8 @@
         "node": true,
         "browser": true
     },
+    "ecmaFeatures": {
+        "modules": true
+    },
     "extends": "eslint:recommended"
 }
