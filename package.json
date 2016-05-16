@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/vivaxy/front-end-scaffold#readme",
   "devDependencies": {
-    "eslint": "^1.10.3",
+    "eslint": "^2.10.1",
     "husky": "^0.10.2"
   }
 }

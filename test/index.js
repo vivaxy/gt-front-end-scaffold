@@ -3,4 +3,4 @@
  * @author vivaxy
  */
 
-console.log('ok'); // eslint-disable-line no-console
+console.log('ok'); // eslint-disable-line no-console, strict
