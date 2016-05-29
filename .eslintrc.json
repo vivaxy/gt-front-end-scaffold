@@ -194,13 +194,17 @@
         "prefer-template": 2,
         "require-yield": 2
     },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
     "env": {
         "es6": true,
         "node": true,
         "browser": true
-    },
-    "ecmaFeatures": {
-        "modules": true
     },
     "extends": "eslint:recommended"
 }
