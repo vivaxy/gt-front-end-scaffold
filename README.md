@@ -6,6 +6,8 @@ basic configuration files for front end projects
 │   ├── css           # css 输出文件
 │   ├── html          # html 输出文件
 │   └── js            # js 输出文件
+├── scripts           # 工具
+│   └── gt.js         # gt 工具
 ├── source            # 源码目录
 │   ├── css           # css 源文件
 │   ├── html          # html 源文件
@@ -20,3 +22,13 @@ basic configuration files for front end projects
 ├── package.json      # node 配置文件
 └── README.md         # 说明文档
 ```
+
+## scaffolding
+
+- install GT `sudo npm i -g granturismo`
+
+- `gt config add vivaxy/front-end-scaffold https://github.com/vivaxy/front-end-scaffold.git`
+
+- `gt init`
+
+- select `vivaxy/front-end-scaffold`
