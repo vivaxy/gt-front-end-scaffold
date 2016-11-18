@@ -82,7 +82,7 @@ const updatePackageJSON = (options) => {
 
 };
 
-export const init = (options) => {
+exports.init = (options) => {
     copyFiles(options);
     updatePackageJSON(options);
 };
