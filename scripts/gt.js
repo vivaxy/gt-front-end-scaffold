@@ -65,14 +65,13 @@ const updatePackageJSON = (options) => {
             main,
             scripts,
             repository: {
-                ...repository,
+                type: repository.type,
                 url: projectGit.repositoryURL,
             },
             keywords,
             author,
             license,
             bugs: {
-                ...bugs,
                 url: undefined,
             },
             dependencies,
