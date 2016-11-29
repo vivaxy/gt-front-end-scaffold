@@ -13,7 +13,7 @@ const sleep = (timeout) => {
     });
 };
 
-const copyFiles = async() => {
+const copyFiles = () => {
 
     const {
         presets,
@@ -30,11 +30,12 @@ const copyFiles = async() => {
         `LICENSE`,
     ];
 
-    await sleep(1000);
-    await presets.copyFiles(files);
+    return sleep(1000).then(() => {
+        return presets.copyFiles(files);
+    });
 };
 
-const updatePackageJSON = async() => {
+const updatePackageJSON = () => {
 
     const {
         project,
@@ -46,52 +47,53 @@ const updatePackageJSON = async() => {
 
     const filename = `package.json`;
 
-    await sleep(1000);
-    await presets.updateJson(filename, (data) => {
+    return sleep(1000).then(() => {
+        return presets.updateJson(filename, (data) => {
 
-        const {
-            name,
-            version,
-            description,
-            main,
-            scripts,
-            repository,
-            keywords,
-            author,
-            license,
-            bugs,
-            homepage,
-            dependencies,
-            devDependencies,
-            peerDependencies,
-        } = data;
+            const {
+                name,
+                version,
+                description,
+                main,
+                scripts,
+                repository,
+                keywords,
+                author,
+                license,
+                bugs,
+                homepage,
+                dependencies,
+                devDependencies,
+                peerDependencies,
+            } = data;
 
-        return {
-            name: project.name,
-            version: `0.0.0`,
-            reactScaffoldVersion: version,
-            description,
-            main,
-            scripts,
-            repository: {
-                type: repository.type,
-                url: projectGit.repositoryURL,
-            },
-            keywords,
-            author,
-            license,
-            bugs: {
-                url: undefined,
-            },
-            dependencies,
-            devDependencies,
-            peerDependencies,
-        };
+            return {
+                name: project.name,
+                version: `0.0.0`,
+                reactScaffoldVersion: version,
+                description,
+                main,
+                scripts,
+                repository: {
+                    type: repository.type,
+                    url: projectGit.repositoryURL,
+                },
+                keywords,
+                author,
+                license,
+                bugs: {
+                    url: undefined,
+                },
+                dependencies,
+                devDependencies,
+                peerDependencies,
+            };
+        });
     });
 
 };
 
-const updateREADME = async() => {
+const updateREADME = () => {
 
     const {
         project,
@@ -101,9 +103,10 @@ const updateREADME = async() => {
 
     const filename = `README.md`;
 
-    await sleep(1000);
-    await presets.updateFile(filename, (data) => {
-        return data.split(`----------`)[1];
+    return sleep(1000).then(() => {
+        return presets.updateFile(filename, (data) => {
+            return data.split(`----------`)[1];
+        });
     });
 
 };
