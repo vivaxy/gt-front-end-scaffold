@@ -7,7 +7,13 @@ const Listr = require('listr');
 
 let data;
 
-const copyFiles = () => {
+const sleep = (timeout) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, timeout);
+    });
+};
+
+const copyFiles = async() => {
 
     const {
         presets,
@@ -22,13 +28,13 @@ const copyFiles = () => {
         `.gitignore`,
         `CHANGELOG.md`,
         `LICENSE`,
-        `README.md`,
     ];
 
-    return presets.copyFiles(files);
+    await sleep(1000);
+    await presets.copyFiles(files);
 };
 
-const updatePackageJSON = () => {
+const updatePackageJSON = async() => {
 
     const {
         project,
@@ -40,7 +46,8 @@ const updatePackageJSON = () => {
 
     const filename = `package.json`;
 
-    return presets.updateJson(filename, (data) => {
+    await sleep(1000);
+    await presets.updateJson(filename, (data) => {
 
         const {
             name,
@@ -84,6 +91,23 @@ const updatePackageJSON = () => {
 
 };
 
+const updateREADME = async() => {
+
+    const {
+        project,
+        scaffold,
+        presets,
+    } = data;
+
+    const filename = `README.md`;
+
+    await sleep(1000);
+    await presets.updateFile(filename, (data) => {
+        return data.split(`----------`)[1];
+    });
+
+};
+
 exports.init = (options) => {
 
     data = options;
@@ -96,6 +120,10 @@ exports.init = (options) => {
         {
             title: `update package.json`,
             task: updatePackageJSON,
+        },
+        {
+            title: `update README.md`,
+            task: updateREADME,
         }
     ]);
 

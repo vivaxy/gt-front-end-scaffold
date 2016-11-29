@@ -1,3 +1,15 @@
+## Scaffolding
+
+- install GT `sudo npm i -g granturismo`
+
+- `gt config add vivaxy/front-end-scaffold https://github.com/vivaxy/front-end-scaffold.git`
+
+- `gt init`
+
+- select `vivaxy/front-end-scaffold`
+
+----------
+
 basic configuration files for front end projects
 
 ```
@@ -22,13 +34,3 @@ basic configuration files for front end projects
 ├── package.json      # node 配置文件
 └── README.md         # 说明文档
 ```
-
-## scaffolding
-
-- install GT `sudo npm i -g granturismo`
-
-- `gt config add vivaxy/front-end-scaffold https://github.com/vivaxy/front-end-scaffold.git`
-
-- `gt init`
-
-- select `vivaxy/front-end-scaffold`
