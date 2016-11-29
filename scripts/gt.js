@@ -3,11 +3,11 @@
  * @author vivaxy
  */
 
-import Listr from 'listr';
+const Listr = require('listr');
 
 let data;
 
-const copyFiles = async() => {
+const copyFiles = () => {
 
     const {
         presets,
@@ -25,10 +25,10 @@ const copyFiles = async() => {
         `README.md`,
     ];
 
-    await presets.copyFiles(files);
+    return presets.copyFiles(files);
 };
 
-const updatePackageJSON = async() => {
+const updatePackageJSON = () => {
 
     const {
         project,
@@ -40,7 +40,7 @@ const updatePackageJSON = async() => {
 
     const filename = `package.json`;
 
-    await presets.updateJson(filename, (data) => {
+    return presets.updateJson(filename, (data) => {
 
         const {
             name,
@@ -84,7 +84,7 @@ const updatePackageJSON = async() => {
 
 };
 
-exports.init = async(options) => {
+exports.init = (options) => {
 
     data = options;
 
