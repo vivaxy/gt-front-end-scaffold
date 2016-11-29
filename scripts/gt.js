@@ -3,11 +3,15 @@
  * @author vivaxy
  */
 
-const copyFiles = (options) => {
+import Listr from 'listr';
+
+let data;
+
+const copyFiles = async() => {
 
     const {
         presets,
-    } = options;
+    } = data;
 
     const files = [
         `source`,
@@ -21,24 +25,22 @@ const copyFiles = (options) => {
         `README.md`,
     ];
 
-    console.log(`copying files...`);
-    presets.copyFiles(files);
+    await presets.copyFiles(files);
 };
 
-const updatePackageJSON = (options) => {
+const updatePackageJSON = async() => {
 
     const {
         project,
         scaffold,
         presets,
-    } = options;
+    } = data;
 
     const projectGit = project.git || {};
 
     const filename = `package.json`;
 
-    console.log(`updating package.json...`);
-    presets.updateJson(filename, (data) => {
+    await presets.updateJson(filename, (data) => {
 
         const {
             name,
@@ -82,7 +84,19 @@ const updatePackageJSON = (options) => {
 
 };
 
-exports.init = (options) => {
-    copyFiles(options);
-    updatePackageJSON(options);
+exports.init = async(options) => {
+
+    data = options;
+
+    return new Listr([
+        {
+            title: `copy files`,
+            task: copyFiles,
+        },
+        {
+            title: `update package.json`,
+            task: updatePackageJSON,
+        }
+    ]);
+
 };
