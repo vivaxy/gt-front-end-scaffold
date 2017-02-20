@@ -20,14 +20,19 @@ const copyFiles = () => {
     } = data;
 
     const files = [
-        `source`,
-        `test`,
-        `.editorconfig`,
-        `.eslintignore`,
-        `.eslintrc.json`,
-        `.gitignore`,
-        `CHANGELOG.md`,
-        `LICENSE`,
+        'scripts/config.js',
+        'scripts/dev.js',
+        'src',
+        'test',
+        '.babelrc',
+        '.editorconfig',
+        '.eslintignore',
+        '.eslintrc.json',
+        '.gitignore',
+        'CHANGELOG.md',
+        'LICENSE',
+        'webpack.config.js',
+        'yarn.lock',
     ];
 
     return sleep(1000).then(() => {
@@ -127,7 +132,11 @@ exports.init = (options) => {
         {
             title: `update README.md`,
             task: updateREADME,
-        }
+        },
     ]);
+
+};
+
+exports.after = () => {
 
 };
