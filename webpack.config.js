@@ -13,7 +13,7 @@ const config = require('./scripts/config');
 
 const SOURCE_PATH = 'src';
 const ENTRY_FOLDER_NAME = 'entries';
-const TEMPLATE_FOLDER_NAME = 'template';
+const TEMPLATE_FOLDER_NAME = 'templates';
 const COMMON_CHUNK_NAME = 'common';
 const ENV_DEVELOPMENT = 'development';
 const ENV_PRODUCTION = 'production';

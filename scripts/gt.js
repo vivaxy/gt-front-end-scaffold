@@ -23,11 +23,8 @@ const copyFiles = () => {
         'scripts/config.js',
         'scripts/dev.js',
         'src',
-        'test',
         '.babelrc',
         '.editorconfig',
-        '.eslintignore',
-        '.eslintrc.json',
         '.gitignore',
         'CHANGELOG.md',
         'LICENSE',
@@ -138,5 +135,9 @@ exports.init = (options) => {
 };
 
 exports.after = () => {
-
+    console.log(`
+        - run 'yarn install' to initialize the project
+        - run 'yarn run dev' to start a development server
+        - run 'yarn run build' to build release files
+`)
 };

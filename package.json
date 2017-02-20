@@ -4,7 +4,6 @@
   "description": "gt front end project scaffold",
   "main": "none",
   "scripts": {
-    "test": "node ./test/index.js",
     "dev": "NODE_ENV=development node ./scripts/dev.js",
     "build": "NODE_ENV=production webpack --progress"
   },
@@ -30,7 +29,6 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.26.1",
-    "eslint": "^2.10.1",
     "file-loader": "^0.10.0",
     "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
