@@ -9,6 +9,7 @@
 - select `vivaxy/gt-front-end-scaffold`
 
 ----------
+__________
 
 ## Initialization
 
@@ -39,7 +40,7 @@ basic configuration files for front end projects
 │   ├── lib           # js 基础库
 │   ├── styles        # 样式源文件 postcss
 │   └── templates     # html 模版文件
-├── test              # 测试目录
+├── .babelrc          # babel 配置
 ├── .editorconfig     # editorconfig 配置文件
 ├── .gitignore        # git 忽略文件
 ├── CHANGELOG.md      # 改动日志

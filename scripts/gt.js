@@ -107,7 +107,28 @@ const updateREADME = () => {
 
     return sleep(1000).then(() => {
         return presets.updateFile(filename, (data) => {
-            return data.split(`----------`)[1];
+            const projectData = data.split(`----------`)[1];
+            return projectData.replace(/__________/g, `${project.name}
+
+Initialized by [vivaxy/gt-front-end-scaffold](https://github.com/vivaxy/gt-front-end-scaffold)`);
+        });
+    });
+
+};
+
+const updateCHANGELOG = () => {
+
+    const {
+        project,
+        scaffold,
+        presets,
+    } = data;
+
+    const filename = `CHANGELOG.md`;
+
+    return sleep(1000).then(() => {
+        return presets.updateFile(filename, (data) => {
+            return '';
         });
     });
 
@@ -129,6 +150,10 @@ exports.init = (options) => {
         {
             title: `update README.md`,
             task: updateREADME,
+        },
+        {
+            title: `update CHANGELOG.md`,
+            task: updateCHANGELOG,
         },
     ]);
 
