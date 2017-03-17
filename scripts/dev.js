@@ -13,6 +13,7 @@ const config = require('./config');
 const compiler = webpack(webpackConfig);
 
 let opened = false;
+const entry = 'demo';
 
 const devServerOptions = {
     hot: true,
@@ -27,7 +28,7 @@ const openBrowser = () => {
     const address = server.listeningApp.address();
     const url = `http://${address.address}:${address.port}`;
     console.log(`   server started: ${url}`);
-    open(`${url}/html/demo.html`);
+    open(`${url}/html/${entry}.html`);
 };
 
 const server = new WebpackDevServer(compiler, devServerOptions);

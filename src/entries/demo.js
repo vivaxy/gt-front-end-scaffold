@@ -3,23 +3,10 @@
  * @author vivaxy
  */
 
-import ejs from '../lib/ejs';
-
-import demoTpl from '../ejs/demo.ejs';
-
-import '../styles/demo.pcss';
-
-const demoTplFn = ejs.compile(demoTpl, {
-    client: true,
-});
-const root = document.querySelector('.js-root');
-
-root.innerHTML = demoTplFn({
-    text: 'demo',
-});
+import '../Demo';
 
 if (module.hot) {
-    module.hot.accept(() => {
+    module.hot.accept('../Demo', () => {
         location.reload();
     });
 }
