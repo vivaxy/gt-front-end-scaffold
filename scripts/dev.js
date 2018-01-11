@@ -13,7 +13,7 @@ const config = require('./config');
 const compiler = webpack(webpackConfig);
 
 let opened = false;
-const entry = 'demo';
+const entry = 'index';
 
 const devServerOptions = {
     hot: true,

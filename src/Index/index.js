@@ -5,9 +5,9 @@
 
 import ejs from '../lib/ejs';
 
-import demoTpl from '../ejs/demo.ejs';
+import demoTpl from '../ejs/index.ejs';
 
-import '../styles/demo.pcss';
+import '../styles/index.pcss';
 
 const demoTplFn = ejs.compile(demoTpl, {
     client: true,

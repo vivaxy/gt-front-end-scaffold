@@ -3,10 +3,10 @@
  * @author vivaxy
  */
 
-import '../Demo';
+import '../Index';
 
 if (module.hot) {
-    module.hot.accept('../Demo', () => {
+    module.hot.accept('../Index', () => {
         location.reload();
     });
 }
