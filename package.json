@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development node ./scripts/dev.js",
     "build": "NODE_ENV=production webpack --progress",
-    "release": "standard-version && git push --follow-tags"
+    "release": "standard-version && git push --follow-tags",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/vivaxy/gt-front-end-scaffold#readme",
   "devDependencies": {
     "autoprefixer": "^6.7.3",
+    "ava": "^0.24.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-polyfill": "^6.23.0",
@@ -34,6 +36,7 @@
     "file-loader": "^0.10.0",
     "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
+    "ignore-styles": "^5.0.1",
     "ip": "^1.1.4",
     "listr": "^0.8.0",
     "log-update": "^1.0.2",
@@ -50,5 +53,12 @@
   },
   "browserslist": [
     "> 1%"
-  ]
+  ],
+  "ava": {
+    "require": [
+      "babel-register",
+      "ignore-styles"
+    ],
+    "babel": "inherit"
+  }
 }
