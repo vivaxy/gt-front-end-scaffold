@@ -8,8 +8,7 @@
     "build": "NODE_ENV=production webpack --progress",
     "release": "standard-version && git push --follow-tags",
     "test": "ava",
-    "precommit": "lint-staged",
-    "format": "prettier --write **/**.{js,json,pcss,md}"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
