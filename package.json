@@ -15,7 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/vivaxy/gt-front-end-scaffold.git"
   },
-  "keywords": ["gt", "scaffold"],
+  "keywords": [
+    "gt",
+    "scaffold"
+  ],
   "author": "vivaxy",
   "license": "MIT",
   "bugs": {
@@ -53,12 +56,20 @@
     "webpack-dev-server": "^2.4.1",
     "webpack-visualizer-plugin": "^0.1.10"
   },
-  "browserslist": ["> 1%"],
+  "browserslist": [
+    "> 1%"
+  ],
   "ava": {
-    "require": ["babel-register", "ignore-styles"],
+    "require": [
+      "babel-register",
+      "ignore-styles"
+    ],
     "babel": "inherit"
   },
   "lint-staged": {
-    "**/**.{js,json,pcss,md}": ["prettier --write", "git add"]
+    "**/**.{js,json,pcss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
