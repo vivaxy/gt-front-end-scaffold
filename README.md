@@ -1,12 +1,12 @@
 ## Scaffolding
 
-- install GT `sudo npm i -g granturismo`
+- Install GT `sudo npm i -g granturismo`
 
 - `gt config add vivaxy/gt-front-end-scaffold https://github.com/vivaxy/gt-front-end-scaffold.git`
 
 - `gt init`
 
-- select `vivaxy/gt-front-end-scaffold`
+- Select `vivaxy/gt-front-end-scaffold`
 
 ----------
 __________

@@ -3,13 +3,12 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+
 ## [0.1.1](https://github.com/vivaxy/gt-front-end-scaffold/compare/v0.1.0...v0.1.1) (2018-01-11)
 
-
-
 <a name="0.1.0"></a>
-# 0.1.0 (2017-03-17)
 
+# 0.1.0 (2017-03-17)
 
 ### Bug Fixes
 
@@ -17,13 +16,10 @@ All notable changes to this project will be documented in this file. See [standa
 * **gt:** fix es6 in gt ([3421c0a](https://github.com/vivaxy/gt-front-end-scaffold/commit/3421c0a))
 * **webpack:** :bug:Rename templates folder, Remove eslint, Remove tests, Update README.md ([25f7d71](https://github.com/vivaxy/gt-front-end-scaffold/commit/25f7d71))
 
-
 ### Features
 
 * **gt:** :sparkles:Upgrade gt.js ([f27802a](https://github.com/vivaxy/gt-front-end-scaffold/commit/f27802a))
 * **webpack:** :sparkles:Add webpack ([d45f405](https://github.com/vivaxy/gt-front-end-scaffold/commit/d45f405))
-
-
 
 # 0.0.0
 

@@ -19,9 +19,9 @@ const devServerOptions = {
     hot: true,
     historyApiFallback: true,
     stats: {
-        colors: true,
+        colors: true
     },
-    contentBase: config.DIST_PATH,
+    contentBase: config.DIST_PATH
 };
 
 const openBrowser = () => {
