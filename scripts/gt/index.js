@@ -123,7 +123,7 @@ export const init = options => {
 export const after = () => {
     console.log(`
         - Run 'yarn install' to initialize the project.
-        - Run 'yarn run dev' to start a development server.
-        - Run 'yarn run build' to build release files.
+        - Run 'yarn dev' to start a development server.
+        - Run 'yarn build' to build release files.
 `);
 };
