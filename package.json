@@ -2,7 +2,7 @@
   "name": "gt-front-end-scaffold",
   "version": "0.2.1",
   "description": "gt front end project scaffold",
-  "main": "none",
+  "main": "./src/entries/index.js",
   "scripts": {
     "dev": "NODE_ENV=development node ./scripts/dev.js",
     "build": "NODE_ENV=production webpack --progress",
